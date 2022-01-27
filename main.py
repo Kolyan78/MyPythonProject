@@ -17,7 +17,7 @@ class Class3(Class1):
         print("Метод func4() класса Class3")
 
 class Class4(Class2, Class3):
-    #func2 = Class3.func2
+    func2 = Class3.func2
     def func4(self):
         print("Метод func4() класса Class4")
 
