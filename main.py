@@ -32,4 +32,4 @@ print(Class2.__bases__)
 print(Class3.__bases__)
 print(Class4.__bases__)
 
-print("Новая ветка")
+print("Новая ветка ")
