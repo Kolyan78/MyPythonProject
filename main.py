@@ -1,17 +1,35 @@
-class Objetos:
-    count = 0
-    def __init__(self):
-        Objetos.count += 1
-        self.number = self.count
+class Class1:
+    def func1(self):
+        print("Метод func1() класса Class1")
 
+class Class2(Class1):
+    def func2(self):
+        print("Метод func2() класса Class2")
 
-c1 = Objetos()
-print(Objetos.count)
-c2 = Objetos()
-print(Objetos.count)
-c3 = Objetos()
-print(Objetos.count)
+class Class3(Class1):
+    def func1(self):
+        print("Метод func1() класса Class3")
+    def func2(selfs):
+        print("Метод func2() класса Class3")
+    def func3(self):
+        print("Метод func3() класса Class3")
+    def func4(self):
+        print("Метод func4() класса Class3")
 
+class Class4(Class2, Class3):
+    func2 = Class3.func2
+    def func4(self):
+        print("Метод func4() класса Class4")
 
-print(c1.count, c2.count, c3.count)
-print(c1.number, c2.number, c3.number)
+c = Class4()
+c.func1()
+c.func2()
+c.func3()
+c.func4()
+
+print(Class1.__bases__)
+print(Class2.__bases__)
+print(Class3.__bases__)
+print(Class4.__bases__)
+
+print("Новая ветка")
